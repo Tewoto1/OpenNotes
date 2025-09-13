@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opennotes"
+version = "0.1.0"
+description = "Notes-native RAG CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "typer>=0.12",
+  "sentence-transformers>=3.0.0",
+  "faiss-cpu",
+  "rank-bm25",
+  "transformers>=4.42",
+  "accelerate>=0.33",
+  "numpy>=1.24",
+  "rich>=13.7"
+]
+
+[project.scripts]
+notes = "notesrag.cli:app"
