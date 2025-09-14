@@ -21,9 +21,6 @@ def start_watcher(path="."):
     return observer
 
 
-def query(msg):
-    pass
-
 def interactive_loop():
     while True:
         try:
@@ -41,7 +38,7 @@ def interactive_loop():
                     print("Usage: query <message>")
                 else:
                     msg = " ".join(cmd[1:])
-                    query(msg)
+                    index.query(msg)
         except KeyboardInterrupt:
             print("\nExiting...")
             break
